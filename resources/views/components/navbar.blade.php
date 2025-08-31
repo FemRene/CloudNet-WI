@@ -6,8 +6,10 @@
     <aside id="multilevel-with-separator" class="overlay [--auto-close:sm] overlay-open:translate-x-0 drawer drawer-start hidden max-w-64 sm:absolute sm:z-0 sm:flex sm:translate-x-0 sm:shadow-none" tabindex="-1" >
         <div class="drawer-header">
             <div class="flex items-center gap-3">
-                <img src="{{asset('logo.png')}}" alt="logo" class="size-20">
-                <h3 class="drawer-title text-xl font-semibold">CloudNet-WI</h3>
+                <a class="flex items-center gap-3" href="{{route('welcome')}}">
+                    <img src="{{asset('logo.png')}}" alt="logo" class="size-20">
+                    <h3 class="drawer-title text-xl font-semibold">CloudNet-WI</h3>
+                </a>
             </div>
         </div>
         <div class="drawer-body px-2 pt-4">
@@ -113,7 +115,7 @@
 @else
     <nav class="navbar rounded-box flex w-full items-center justify-between gap-2 shadow-base-300/20 shadow-sm">
         <div class="navbar-start max-md:w-1/4">
-            <a class="flex items-center gap-3" href="{{route('index')}}">
+            <a class="flex items-center gap-3" href="{{route('welcome')}}">
                 <img src="{{asset('logo.png')}}" alt="logo" class="size-20">
                 <h3 class="drawer-title text-xl font-semibold">CloudNet-WI</h3>
             </a>
