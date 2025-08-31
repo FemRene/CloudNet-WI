@@ -3,7 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', view('welcome.main'))->name('welcome');
+Route::get('/', function () {return view('welcome.main');})->name('welcome');
 
 Route::middleware(['cloudnet.auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('index');
