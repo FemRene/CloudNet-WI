@@ -1,10 +1,18 @@
 @import 'tailwindcss';
 @import '../../vendor/livewire/flux/dist/flux.css';
+@import "flyonui/variants.css";
+@import "flyonui/src/vendor/notyf.css";
 
 @source '../views';
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../vendor/livewire/flux-pro/stubs/**/*.blade.php';
 @source '../../vendor/livewire/flux/stubs/**/*.blade.php';
+@source "../node_modules/flyonui/flyonui.js";
+
+@plugin "flyonui" {
+    themes: all;
+}
+@plugin "@iconify/tailwind4";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
